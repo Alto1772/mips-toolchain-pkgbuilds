@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = https://aur.archlinux.org/mips64-linux-gnu-linux-api-headers.git
+	branch = master
+	commit = 42820fb1f4a15971b9d0cf1a471ad079a03015bb
+	parent = 5403734cbe7f231ff2f4fdabac1ff8d3f0a0ebbd
+	method = merge
+	cmdver = 0.4.6
