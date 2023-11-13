@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = https://aur.archlinux.org/mips64-linux-gnu-gcc-bootstrap.git
+	branch = master
+	commit = 72293354accd5428c4d140ac3bc598d6e2bdb39a
+	parent = 9ff7dbf50f3f8004fa80214d3f8e34fc58962e93
+	method = merge
+	cmdver = 0.4.6
