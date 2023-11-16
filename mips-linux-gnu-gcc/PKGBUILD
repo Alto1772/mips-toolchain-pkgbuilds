@@ -1,21 +1,21 @@
 # Maintainer : Daniel Bermond <dbermond@archlinux.org>
 # Contributor: Valentín Kivachuk <vk18496@gmail.com>
 
-_target=mips64-linux-gnu
+_target=mips-linux-gnu
 pkgname="${_target}-gcc"
 pkgver=12.2.0
 _majorver="${pkgver%%.*}"
 pkgrel=1
-pkgdesc='The GNU Compiler Collection - cross compiler for the MIPS64 target (for the toolchain with GNU C library and with multilib ABI)'
+pkgdesc='The GNU Compiler Collection - cross compiler for the MIPS target (for the toolchain with GNU C library and with multilib ABI)'
 arch=('x86_64')
 url='https://gcc.gnu.org/'
 license=('GPL' 'LGPL' 'FDL' 'custom')
 depends=('gmp' 'libmpc' "${_target}-binutils" "${_target}-glibc" 'libisl' 'mpfr' 'sh' 'zlib' 'zstd')
 makedepends=("${_target}-linux-api-headers")
-provides=('mips64-linux-gnuabi64-gcc' 'mips64-linux-gnuabi32-gcc'
-          'mips64-linux-gnuabin32-gcc' "${pkgname}-bootstrap")
-conflicts=('mips64-linux-gnuabi64-gcc' 'mips64-linux-gnuabi32-gcc'
-           'mips64-linux-gnuabin32-gcc' "${pkgname}-bootstrap")
+provides=('mips-linux-gnuabi64-gcc' 'mips-linux-gnuabi32-gcc'
+          'mips-linux-gnuabin32-gcc' "${pkgname}-bootstrap")
+conflicts=('mips-linux-gnuabi64-gcc' 'mips-linux-gnuabi32-gcc'
+           'mips-linux-gnuabin32-gcc' "${pkgname}-bootstrap")
 options=('!emptydirs' '!strip' 'staticlibs' '!lto')
 source=("https://sourceware.org/pub/gcc/releases/gcc-${pkgver}/gcc-${pkgver}.tar.xz"{,.sig}
         '010-gcc-Wno-format-security.patch'
@@ -29,8 +29,9 @@ sha256sums=('e549cf9cf3594a00e27b6589d4322d70e0720cdd213f39beb4181e06926230ff'
 validpgpkeys=('13975A70E63C361C73AE69EF6EEB81F8981C74C7'  # Richard Guenther <richard.guenther@gmail.com>
               'D3A93CAD751C2AF4F8C7AD516C35B99309B5FA62') # Jakub Jelinek <jakub@redhat.com>
 
-_ABIS=('64' 'n32' '32')
-_DEFAULT_ABI='64' # gcc defaults to 'n32' ABI for MIPS64
+#_ABIS=('64' 'n32' '32')
+_ABIS=('32')
+_DEFAULT_ABI='32' # gcc defaults to 'n32' ABI for MIPS64
 
 prepare() {
     mkdir -p build

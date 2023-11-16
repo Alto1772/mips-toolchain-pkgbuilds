@@ -2,11 +2,11 @@
 # Contributor: Valentín Kivachuk <vk18496@gmail.com>
 
 _target_arch=mips
-_target=mips64-linux-gnu
+_target=mips-linux-gnu
 pkgname="${_target}-linux-api-headers"
 pkgver=5.19.2
 pkgrel=1
-pkgdesc='Kernel headers sanitized for use in userspace (MIPS64 target, for the toolchain with GNU C library and multilib ABI)'
+pkgdesc='Kernel headers sanitized for use in userspace (MIPS target, for the toolchain with GNU C library and multilib ABI)'
 arch=('any')
 url='https://www.kernel.org'
 license=('GPL2')

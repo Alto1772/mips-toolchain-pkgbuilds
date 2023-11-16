@@ -1,11 +1,11 @@
 # Maintainer : Daniel Bermond <dbermond@archlinux.org>
 # Contributor: Valentín Kivachuk <vk18496@gmail.com>
 
-_target=mips64-linux-gnu
+_target=mips-linux-gnu
 pkgname="${_target}-glibc"
 pkgver=2.36
 pkgrel=1
-pkgdesc='GNU C library for the MIPS64 target with multilib ABI'
+pkgdesc='GNU C library for the MIPS target with multilib ABI'
 arch=('any')
 url='https://www.gnu.org/software/libc/'
 license=('GPL' 'LGPL')
@@ -22,7 +22,8 @@ sha256sums=('1c959fea240906226062cb4b1e7ebce71a9f0e3c0836c09e7e3423d434fcfe75'
 validpgpkeys=('7273542B39962DF7B299931416792B4EA25340F8'  # Carlos O'Donell
               'BC7C7372637EC10C57D7AA6579C43DFBF1CF2187') # Siddhesh Poyarekar
 
-_ABIS=('64' 'n32' '32')
+#_ABIS=('64' 'n32' '32')
+_ABIS=('32')
 
 prepare() {
     local _abi
